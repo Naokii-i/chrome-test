@@ -1,0 +1,29 @@
+{
+    "name": "It's a small world",
+    "description": "broaden the horizon",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": [
+        "alarms",
+        "tabs"
+      ],
+      
+    "content_scripts":[
+    {
+      "matches":[
+          "https://*/*/*/comments?page=2*",
+          "https://*/*/*/comments?page=2*"
+      ],
+      "js":[
+        "comment.js",
+        "comment2.js"
+      ]
+    }
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "omnibox": { "keyword" : "google"}
+}
+
